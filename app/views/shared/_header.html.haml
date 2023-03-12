@@ -2,4 +2,7 @@
   %div.header-logo
     = image_tag("website_logo.svg")
   %div.header-nav-menu
-    
+    %ul
+      - Category.roots.each do |category|
+        %li.header-menu-item
+          = category.name
